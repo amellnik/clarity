@@ -18,7 +18,7 @@
 <h4>String filter</h4>
 
 <p>
-  At the moment, the only built-in filter we provide is the "string" filter one, meaning the user is offered a text input,
+  The first type of built-in filter we provide is the "string" filter one, meaning the user is offered a text input,
   and the rows will be filtered based on a string-matching function you provide. You should now be familiar with our use
   of interfaces for this, so here is the interface your string matcher should implement:
 </p>
@@ -33,8 +33,17 @@
   he's interested in.
 </p>
 
+<h4>Numeric filter</h4>
+
+<p>
+    The second type of built-in filter is the "numeric" filter, which allows the user to optionally enter a high and/or low limit for the values in the column.  This type of filter is applied to the User ID column below.
+</p>
+
 <clr-datagrid>
-  <clr-dg-column>User ID</clr-dg-column>
+  <clr-dg-column>
+    User ID
+    <clr-dg-numeric-filter></clr-dg-numeric-filter>
+  </clr-dg-column>
   <clr-dg-column>Name
   </clr-dg-column>
   <clr-dg-column>Creation date</clr-dg-column>
